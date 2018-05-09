@@ -24,6 +24,7 @@
       var map;
       function initMap() {
         const buenosAires = {lat: -34.6037, lng: -58.3816};
+
         map = new google.maps.Map(document.getElementById('map'), {
           center: buenosAires,
           zoom: 13,
@@ -31,6 +32,18 @@
           rotateControl: false,
           fullscreenControl: false,
           mapTypeControl: false
+        });
+
+        var driveId = '1FK8PNLJiOHkFqGBj3-n9I1CMX5c6WWrF'; // plain kmz
+
+        var kmlURL = 'https://drive.google.com/uc?export=download&id=' + driveId
+        + '&r=' + (new Date()).getTime();
+        // el r es necesario para que no cachee el archivo.
+
+        var kmlLayer = new google.maps.KmlLayer(kmlURL, {
+          suppressInfoWindows: false,
+          preserveViewport: false,
+          map: map
         });
       }
     </script>
