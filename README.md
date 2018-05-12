@@ -13,7 +13,7 @@ Pasos a seguir (o Historias):
 0.2.2: Customizar marcadores. LISTO (se hace desde myMaps)
 0.2.3: Mensaje on click con información pertinente. LISTO (se hace desde myMaps)
 
-0.3.1: Agregar Logo temporal al sitio.
+0.3.1: Agregar Logo temporal al sitio. LISTO.
 0.3.2: Agregar sección "¿Que es esto?" o "Más Info"
 0.3.3: Agregar sección Contactos
 

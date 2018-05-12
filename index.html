@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Simple Map</title>
-    <meta name="viewport" content="initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <style>
       /* Always set the map height explicitly to define the size of the div
@@ -17,13 +17,29 @@
         padding: 0;
       }
     </style>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
   </head>
   <body>
+    <header class="controls">
+      <div id="left-section-controller" class="section-controller">
+        <a href="javascript:void(0)">¿Qué es esto?</a>
+      </div>
+      <div id="logo"></div>
+      <div id="right-section-controller" class="section-controller">
+        <a href="javascript:void(0)">Contácto</a>
+      </div>
+    </header>
+    <section id="left-section">
+      <a href="javascript:void(0)" class="close">Cerrar</a>
+    </section>
+    <section id="right-section">
+      <a href="javascript:void(0)" class="close">Cerrar</a>
+    </section>
     <div id="map"></div>
     <script>
       var map;
       function initMap() {
-        const buenosAires = {lat: -34.6037, lng: -58.3816};
+        var buenosAires = {lat: -34.6037, lng: -58.3816};
 
         map = new google.maps.Map(document.getElementById('map'), {
           center: buenosAires,
@@ -36,8 +52,8 @@
 
         var driveId = '1FK8PNLJiOHkFqGBj3-n9I1CMX5c6WWrF'; // plain kmz
 
-        var kmlURL = 'https://drive.google.com/uc?export=download&id=' + driveId
-        + '&r=' + (new Date()).getTime();
+        var kmlURL = 'https://drive.google.com/uc?export=download&id=' + driveId +
+          '&r=' + (new Date()).getTime();
         // el r es necesario para que no cachee el archivo.
 
         var kmlLayer = new google.maps.KmlLayer(kmlURL, {
@@ -49,5 +65,22 @@
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdWvODShNGpakM14JC54lP-x4r_zBp32g&callback=initMap"
     async defer></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+    <script>
+      $(function() {
+        $('#left-section-controller').click(function() {
+          $("#left-section").addClass("open");
+        });
+        $('#right-section-controller').click(function() {
+          $("#right-section").addClass("open");
+        });
+        $("section .close").click(function() {
+          $(this).parent().removeClass("open");
+        });
+      });
+    </script>
   </body>
 </html>
