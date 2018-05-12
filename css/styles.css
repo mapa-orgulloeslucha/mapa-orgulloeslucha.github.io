@@ -70,3 +70,12 @@ section#right-section {
 section#right-section.open {
 	right: 0;
 }
+
+/*
+  ##Device = Tablets, Ipads (landscape) and up
+*/
+@media (min-width: 481px)  {
+	section {
+		width: 40%;
+	}
+}
