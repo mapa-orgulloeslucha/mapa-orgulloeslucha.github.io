@@ -14,13 +14,23 @@ Pasos a seguir (o Historias):
 0.2.3: Mensaje on click con información pertinente. LISTO (se hace desde myMaps)
 
 0.3.1: Agregar Logo temporal al sitio. LISTO.
-0.3.2: Agregar sección "¿Que es esto?" o "Más Info"
-0.3.3: Agregar sección Contactos
+0.3.2: Agregar sección "¿Que es esto?" o "Más Info" LISTO
+0.3.3: Agregar sección Contactos LISTO
 
-0.4: Agregar estios personalizados al mapa.
+0.4.1: Agregar estios personalizados al mapa.
+0.4.2: Agregar estios personalizados a las secciones.
 
-0.5: Add HTTPS
+0.5: Add Google analytics
+
 
 -----------------------------------------------
 
 Hay que modificar el myMaps, modificar el mapa, luego exportar el archivo como kmz (opciones por defecto) y subirlo a la misma carpeta. El ID de google drive que se usa es el del kmz.
+
+-----------------------------------------------
+mapa.orgulloeslucha@gmail.com/-
+
+Github
+mapa-orgulloeslucha/-
+
+https://mapa-orgulloeslucha.github.io/
