@@ -45,6 +45,7 @@ header.controls {
 }
 
 section {
+	/*display: none;*/
 	position: absolute;
 	height: 100%;
 	width: 100%;
@@ -53,6 +54,10 @@ section {
 
 	transition-duration: 0.5s;
 	transition-timing-function: ease-out;
+}
+
+section.open {
+	display: block;
 }
 
 section#left-section {
